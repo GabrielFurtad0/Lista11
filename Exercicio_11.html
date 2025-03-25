@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <label for="slct_tabuada">Escolha um número para ver sua tabuada</label>
+  <select id="slct_tabuada">
+    <option disabled selected>Escolha uma opção</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+  </select>
+  <label for="ipt_tabuadaAte">Até que número a tabuada deve ser construida? </label>
+  <input type="number" id="ipt_tabuadaAte"> 
+
+  <button onclick="tabuada()">Ver tabuada</button>
+  <div id="div_tabuada"></div>
+</body>
+<script>
+  function tabuada(){
+    const select = document.getElementById('slct_tabuada');
+    const valorSelecionado = select.value;
+    var tabuadaAte = Number(ipt_tabuadaAte.value) 
+    
+    
+    for(var contador = 1; contador <=tabuadaAte; contador ++){
+      var resultado = valorSelecionado * contador
+      if(resultado % 2 === 0){
+        div_tabuada.innerHTML += `<p style="color: blue;">${valorSelecionado} x ${contador} = ${resultado}</p>`
+        
+      }else {
+        div_tabuada.innerHTML += `<p style="color: red;">${valorSelecionado} x ${contador} = ${resultado}</p>`
+        
+      }
+    }
+
+  }
+</script>
+</html>

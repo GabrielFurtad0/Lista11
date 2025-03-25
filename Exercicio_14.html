@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <label for="ipt_coca">Quantas latas de coca-cola você ja bebeu na vida? </label>
+  <input type="text" id="ipt_coca">
+
+  <button onclick="coca()">Ver a quantidade</button>
+  <div id="div_coca"></div>
+</body>
+<script>
+  function coca(){
+    var coca = Number(ipt_coca.value)
+    var latinhas ="";
+
+    for (var contador = 1; contador <= coca; contador ++){     
+      latinhas += `${contador} Latinha`
+    }
+    div_coca.innerHTML = `${latinhas}`
+  }
+</script>
+</html>

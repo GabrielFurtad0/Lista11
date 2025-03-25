@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="ipt_num">Escolha um numero:</label>
+    <input type="text" id="ipt_num">
+
+    <label for="ipt_frase">Escreva uma frase: </label>
+    <input type="text" id="ipt_frase">
+
+    <button onclick="papagaio()">Papagaio</button>
+    <div id="div_papagaio"></div>
+</body>
+<script>
+    function papagaio(){
+        var num = Number(ipt_num.value)
+        var frase = ipt_frase.value
+
+        for(var i = 0; i != num; i++){
+            div_papagaio.innerHTML += `${frase}<br>`
+        }
+    }
+</script>
+</html>

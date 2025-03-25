@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="ipt_num1">Insira aqui o primeiro numero do intervalo: </label>
+    <input type="text" id="ipt_num1">
+
+    <label for="ipt_num2">Insira aqui o segundo numero do intervalo: </label>
+    <input type="text" id="ipt_num2">
+
+    <button onclick="intervalo()">S2 pares</button>
+
+    <div id="div_intervalo"></div>
+</body>
+<script>
+    function intervalo(){
+    var num1 = Number(ipt_num1.value)
+    var num2 = Number(ipt_num2.value)
+    var i = 0
+
+    if (num1 < num2){
+        for(i ; i <num1+1; i+=2)
+    {div_intervalo.innerHTML =``}
+        for(i ; i < num2; i+=2){
+            div_intervalo.innerHTML += `${i}<br>`}
+    }
+    }
+</script>
+</html>

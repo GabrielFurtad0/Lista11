@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <label for="ipt_xicra">Quantas xícaras de café com leite você ja tomou? </label>
+  <input type="text" id="ipt_xicra">
+
+  <button onclick="cafe()">Ver a quantidade</button>
+  <div id="div_cafe"></div>
+</body>
+<script>
+  function cafe(){
+    xicara = Number(ipt_xicra.value)
+    respostaLeite = ""
+    respostaCafe = ""
+
+    for(var contador = 1; contador <= xicara; contador ++){
+      respostaLeite += `${contador} colher(es) de leite em pó<br>`
+    } for(var contador2 = 1; contador2 <= xicara * 2; contador2 ++){
+      respostaCafe += `${contador2} colheres de café em pó<br>`
+    }
+    div_cafe.innerHTML = `${respostaLeite} ${respostaCafe}`
+  }
+</script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <label for="ipt_qtdDeposito">Quantos depositos foram feitos? </label>
+  <input type="text" id="ipt_qtdDeposito">
+
+  <label for="ipt_valor">Qual o valor dos depositos? </label>
+  <input type="text" id="ipt_valor">
+
+  <button onclick="grana()">Acompanhar grana</button>
+  <div id="div_grana"></div>
+</body>
+<script>
+  function grana(){
+    var qtdDeposito = Number(ipt_qtdDeposito.value)
+    var valor = Number(ipt_valor.value)
+    var divPorMes = ""
+    var total = ""
+
+    for (var contador = 1; contador <= qtdDeposito; contador += 1){
+      var resultado = contador * valor
+      divPorMes += `${contador}º mês: R$${resultado}<br>`
+      
+    } total += `Total guardado: R$${resultado}`
+
+    div_grana.innerHTML = `${divPorMes} ${total}`
+  }
+</script>
+</html>

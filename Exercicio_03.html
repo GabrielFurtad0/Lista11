@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="ipt_frase">Escreva aqui uma frase: </label>
+    <input type="text" id="ipt_frase">
+
+    <button onclick="algoritimos()">Diga algo sobre a matéria de Algoritmos</button>
+    <div id="div_algoritimos"></div>
+</body>
+<script>
+    function algoritimos(){
+        for (i = 0; i <=6; i++){
+            i ++
+            div_algoritimos.innerHTML += `${i}. ${ipt_frase.value}<br>`
+            i -= 1
+        }
+    }
+</script>
+</html>

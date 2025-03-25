@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crie um programa que simule a entrada de caronas num carro:</title>
+</head>
+<body>
+  <label for="ipt_qtd">Quantas pessoas vão entrar no carro? </label>
+  <input type="text" id="ipt_qtd">
+
+  <button onclick="carona()">#PartiuCarona</button>
+  <div id="div_carona"></div>
+</body>
+<script>
+  function carona(){
+    var qtd = Number(ipt_qtd.value)
+
+    for(var contador = 1; contador <= qtd; contador ++ ){
+      if(contador == 1){
+        div_carona.innerHTML += `O ${contador}º passageiro passageiro esta entrando, é o motorista<br>`
+      }else if (contador <= 5 ){
+        div_carona.innerHTML += `O ${contador}º passageiro está entrando<br>`
+      }else
+      div_carona.innerHTML += `O ${contador}º passageiro terá de esperar!<br>`
+    }
+  }
+</script>
+</html>

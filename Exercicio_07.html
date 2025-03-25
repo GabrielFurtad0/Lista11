@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="ipt_num">Insira um numero entre 0 e 200</label>
+    <input type="text" id="ipt_num">
+
+    <button onclick="cinco()">Adoro múltiplos de 5</button>
+    <div id="div_cinco"></div>
+</body>
+<script>
+    function cinco(){
+        var num = Number(ipt_num.value)
+        if (num >= 0 && num <= 200){
+
+            for (var i = 0; i <= num; i += 7){
+                div_cinco.innerHTML += `${i}<br>`
+            }
+        }
+    }
+</script>
+</html>
